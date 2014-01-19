@@ -1,0 +1,124 @@
+TRIER COMPTE
+============
+
+Dictionnaire dépenses, recettes
+
+Pour chaque opération dans compte faire
+	dicoTemp = dépenses
+	si opération.montant > 0 alors
+		dicoTemp = recettes
+	fsi
+	insérer opération dans dicoTemp avec opération.libellé en clé
+fpour
+
+FIN
+
+
+IDENTIFIER RECURRENCE dicoTrié, fixe, [recurrent]
+=====================
+
+	pour chaque groupe dans dicoTrié faire
+		si groupe.length > 1 alors
+			moyenne = 0
+			pour chaque opération dans groupe faire
+				moyenne += absolue(opération.montant)
+			fpour
+			moyenne = moyenne / groupe.length
+			seuil = moyenne * tauxTolérance
+			estFixe = vrai
+
+			tant que non fin groupe && estFixe faire
+				si absolue(moyenne - montant) >= seuil alors
+					estFixe = faux
+				fsi
+			ftant
+
+			si estFixe alors
+				insérer opération dans fixe avec libellé en clé
+			sinon si recurrent != null
+				insérer opération dans récurrent avec libellé en clé
+			fsi
+		fsi
+	fpour
+
+	mise en mémoire de fixe et récurrent
+
+FIN
+
+
+VERIFICATION ANALYSE USER 
+=========================
+
+	récupérer recetteFixes
+	pour chaque opération dans recetteFixes faire
+		demander si c'est bien un revenu fixe à l'user (UX à définir)
+		si réponse == oui alors
+			opération.extVérifiée = vrai
+		sinon
+			supprimer opération de recetteFixes
+		fsi
+	fpour
+
+	récupérer dépensesFixe et dépensesRécurrentes
+
+	pour chaque opération dans dépenseFixe faire
+		demander si c'est bien une dépense fixe
+		opération.estVérifiée = vrai
+		si réponse == non alors
+			insérer opération dans dépensesRécurrentes avec libellé en clé
+			supprimer opération de dépenseFixe
+		fsi
+	fpour
+
+	pour chaque opération dans dépensesRécurrentes faire
+		si opération.estVérifiée = faux alors
+			demander si c'est une dépense récurrente
+			opération.estVérifiée = vrai
+			si réponse == non alors
+				insérer opération dans dépensesFixes avec libellé en clé
+				supprimer opérationde dépensesRécurrentes
+			fsi
+		fsi
+	fpour
+
+	mise en mémoire de recetteFixes, dépensesFixes, dépensesRécurrentes
+
+FIN
+
+
+
+DÉFINIR ENVELOPPE QUOTIDIENNE
+=============================
+
+	récupérer recettesFixes
+	revenuMaximal = recetteFixes[0]
+	sommeRevenus = revenuMaximal[0].montant
+
+	pour  i=1 à i=recettesFixes.length, i++ faire
+		si recettesFixes[i].montant > revenuMaximal.montant alors
+			revenuMaximal = recettesFixes[i]
+		sinon si recettesFixes[i].montant == revenuMaximal.montant && recettesFixes[i].date > revenuMaximal.date alors
+			revenuMaximal = recettesFixes[i]
+		fsi
+		sommeRevenus += recettesFixes[i].montant
+	fpour
+
+	si solde < 0 alors
+		enveloppe = 0
+	sinon
+		nbjoursrestant = revenuMaximal.date - aujourd'hui
+		base = solde - ConstanteMinimum
+		si base < 0 alors
+			alerte utilisateur t'es dans la merde Morray
+			base = solde
+		fsi
+
+		enveloppe = sommeRevenus / revenuMaximal.interval
+		si base/nbjoursrestant < enveloppe alors
+			enveloppe = base / nbjoursrestant
+		fsi
+
+		mise en mémoire de enveloppe
+	fsi
+
+FIN
