@@ -122,3 +122,50 @@ DÉFINIR ENVELOPPE QUOTIDIENNE
 	fsi
 
 FIN
+
+
+MONTHLY PROPORTIONAL timestamp1, timestamp2
+===================
+
+	result = false
+	interval = abs(timestamp1 - timestamp2)
+	if interval <= TIME_FLEXIBILITY && getMonth(timestamp1) != getMonth(timestamp2) then
+		result = true
+	endif
+
+	return result
+
+END
+
+
+IDENTIFY RECURRENT
+====================
+
+	1st : group by alias
+	2nd : keep only same amount +/- AMOUNT_FLEXIBILITY -> return operationGroupByAliasAmount (gbaa)
+
+	// Check recurrency
+
+	j = 0
+	gbaaLength = gbaa.length
+	for(i=0 to i<gbaaLength , i++){
+		j = i + 1
+		regular = true
+		
+		while regular && j<gbaaLength-1 {
+			regular = monthlyProportional(gbaa[i], gbaa[j])
+			j++
+		}
+
+		// If it's not the penultimate
+		if(!regular && j < gbaaLength-2){
+			move gbaa[i] from gbaa to general debit
+		}
+	}
+
+	if(j == gbaaLength-2){
+		// Réfléchir à comment traiter ce cas
+	}
+
+
+END
