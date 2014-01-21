@@ -169,3 +169,17 @@ IDENTIFY RECURRENT
 
 
 END
+
+
+DEFINE NEXT ENVELOPE
+===============
+
+// Récupérer le solde
+
+// Identifier les dépenses qui vont avoir lieu dans le mois
+
+// identifier les revenus qui vont arriver dans le mois
+
+// Le but : arriver à rester au dessus de 0 ou d'un solde défini (solde_fixe par défaut = 0) tout au long du mois
+
+//  Comment : identifier le prochain revenu, chercher toutes les dépenses fixes connue jusque là, les soustraires, obtenir le solde future le soustraire au solde_fixe. On obtient l'enveloppe. On la divise par le nombre de jour jusqu'à ce revenu.
