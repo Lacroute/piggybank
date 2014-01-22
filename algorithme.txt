@@ -173,13 +173,60 @@ END
 
 DEFINE NEXT ENVELOPE
 ===============
+	// Le but : arriver à rester au dessus d'un solde défini (FIXED_BALANCE par défaut = 0) tout au long du mois
+	//  Comment : identifier le prochain salaire, chercher toutes les dépenses fixes connue jusque là, les soustraires, chercher toutes les entrées d'arganet jusque là, les ajouter, obtenir le solde future le soustraire au FIXED_BALANCE. On obtient l'enveloppe. On la divise par le nombre de jour jusqu'à ce salaire.
 
-// Récupérer le solde
 
-// Identifier les dépenses qui vont avoir lieu dans le mois
+	// Récupérer le solde
+	account_balance = account.getBalance()
 
-// identifier les revenus qui vont arriver dans le mois
+	fixed_debit = account.getFixedDebit()
+	fixed_credit = account.getFixedCredit()
 
-// Le but : arriver à rester au dessus de 0 ou d'un solde défini (solde_fixe par défaut = 0) tout au long du mois
+	// Récupérer le revenu fixe maximum (penser à le stocker quelquepart pour éviter les boucles inutiles)
+	// max_income est un tableau contenant toutes les opération du lébellé ayant la somme la plus importante
+	max_income = fixed_credit[0][0]
+	for(i=1; i<fixed_credit; i++){
+		if(max_income.amount < fixed_credit[i][0].amount){
+			max_income = fixed_credit[i]
+		}
+	}
 
-//  Comment : identifier le prochain revenu, chercher toutes les dépenses fixes connue jusque là, les soustraires, obtenir le solde future le soustraire au solde_fixe. On obtient l'enveloppe. On la divise par le nombre de jour jusqu'à ce revenu.
+
+	// identifier les revenus qui vont arriver dans le mois
+	debut = max_income[0].date
+	fin = max_income[0].date
+	sum_monthly_credit = 0
+	for(i=0; i<fixed_credit.length; i++){
+		if(debut <= fixed_credit[i][0].date && fixed_credit[i][0].date < fin){
+			sum_monthly_credit += fixed_credit[i][0].amount
+		}
+	}
+
+
+	// Identifier les dépenses qui vont avoir lieu dans le mois ==> en faiire une fonction de type getSumMonthly
+	sum_monthly_debit = 0
+	for(i=0; i<fixed_debit.length; i++){
+		if(debut <= fixed_debit[i][0].date && fixed_debit[i][0].date < fin){
+			sum_monthly_debit += fixed_debit[i][0].amount
+		}
+	}
+
+
+	monthly_envelope = sum_monthly_debit - sum_monthly_credit
+
+	// tester et prévenir si c'est la merde > mettre dans une fonction isItPlausible()
+	if(monthly_envelope < FIXED_BALANCE){
+		alert("T'arriveras pas à garder ton solde Morray, baisse ton objectif !")
+	}
+	// MINIMAL_ENVELOPE est une constante égale à un pourcentage du revenu (ex: 10%)
+	if(monthly_envelope < MINIMAL_ENVELOPE){
+		alerte("Ca va etre très dur Morray, baisse ton objectif ou mange des pates")
+	}
+	if(monthly_envelope < 0){
+		alerte("c'est vraiment la merde Morray !")
+	}
+
+
+	daily_envelope_reference = monthly_envelope / (fin - debut)
+	daily_envelope_real = daily_envelope_reference * (fin - aujourd'hui)
