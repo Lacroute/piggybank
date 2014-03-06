@@ -1,0 +1,240 @@
+[
+  {
+    "title": "CIC PARIS NATION", 
+    "raw": "CARTE X1234 RETRAIT DAB 01/09 10H03 CIC PARIS NATION", 
+    "amount": -40.0, 
+    "docType": "BankOperation", 
+    "bankAcount": "1234567890", 
+    "date": "2013-09-01T00:00:00.000Z"
+  }, 
+  {
+    "title": "MOBILE 1234567", 
+    "raw": "PRELEVEMENT MOBILE 1234567", 
+    "amount": -19.99, 
+    "docType": "BankOperation", 
+    "bankAcount": "1234567890", 
+    "date": "2013-09-03T00:00:00.000Z"
+  }, 
+  {
+    "title": "MOBILE 1234567", 
+    "raw": "PRELEVEMENT MOBILE 1234567", 
+    "amount": -19.99, 
+    "docType": "BankOperation", 
+    "bankAcount": "1234567890", 
+    "date": "2013-09-03T00:00:00.000Z"
+  }, 
+  {
+    "title": "LOGITEL POUR: AGENCE PARIS CHAMPS ELYSEES", 
+    "raw": "VIR EUROPEEN EMIS LOGITEL POUR: AGENCE PARIS CHAMPS ELYSEES", 
+    "amount": -500.0, 
+    "docType": "BankOperation", 
+    "bankAcount": "1234567890", 
+    "date": "2013-09-04T00:00:00.000Z"
+  }, 
+  {
+    "title": "INTERMARCHE", 
+    "raw": "CARTE X1234 04/09 INTERMARCHE", 
+    "amount": -41.21, 
+    "docType": "BankOperation", 
+    "bankAcount": "1234567890", 
+    "date": "2013-09-04T00:00:00.000Z"
+  }, 
+  {
+    "title": "ARMAND THIERY", 
+    "raw": "CARTE X1234 09/09 ARMAND THIERY", 
+    "amount": -179.0, 
+    "docType": "BankOperation", 
+    "bankAcount": "1234567890", 
+    "date": "2013-09-09T00:00:00.000Z"
+  }, 
+  {
+    "title": "SALAIRE", 
+    "raw": "VIR RECU MOTIF\u00a0: SALAIRE", 
+    "amount": 700.0, 
+    "docType": "BankOperation", 
+    "bankAcount": "1234567890", 
+    "date": "2013-09-10T00:00:00.000Z"
+  }, 
+  {
+    "title": "INTERMARCHE", 
+    "raw": "CARTE X1234 17/09 INTERMARCHE", 
+    "amount": -94.22, 
+    "docType": "BankOperation", 
+    "bankAcount": "1234567890", 
+    "date": "2013-09-17T00:00:00.000Z"
+  }, 
+  {
+    "title": "LIDL 0304", 
+    "raw": "CARTE X1234 19/09 LIDL 0304", 
+    "amount": -11.35, 
+    "docType": "BankOperation", 
+    "bankAcount": "1234567890", 
+    "date": "2013-09-19T00:00:00.000Z"
+  }, 
+  {
+    "title": "LCL LE CREDIT LYONNAIS", 
+    "raw": "CARTE X1234 RETRAIT DAB 19/09 12H23 LCL LE CREDIT LYONNAIS", 
+    "amount": -40.0, 
+    "docType": "BankOperation", 
+    "bankAcount": "1234567890", 
+    "date": "2013-09-19T00:00:00.000Z"
+  }, 
+  {
+    "title": "LIDL", 
+    "raw": "CARTE X1234 20/09  LIDL", 
+    "amount": -5.0, 
+    "docType": "BankOperation", 
+    "bankAcount": "1234567890", 
+    "date": "2013-09-20T00:00:00.000Z"
+  }, 
+  {
+    "title": "LOGITEL POUR\u00a0: MARTIN", 
+    "raw": "VIR EUROPEEN EMIS LOGITEL POUR: MARTIN", 
+    "amount": -100.0, 
+    "docType": "BankOperation", 
+    "bankAcount": "1234567890", 
+    "date": "2013-09-20T00:00:00.000Z"
+  }, 
+  {
+    "title": "LOGITEL POUR\u00a0: MARTIN", 
+    "raw": "VIR EUROPEEN EMIS LOGITEL POUR: MARTIN", 
+    "amount": 100.0, 
+    "docType": "BankOperation", 
+    "bankAcount": "987654321", 
+    "date": "2013-09-20T00:00:00.000Z"
+  }, 
+  {
+    "title": "CREDIT DU NORD", 
+    "raw": "CARTE X1234 RETRAIT DAB 28/09 09H04 CREDIT DU NORD", 
+    "amount": -50.0, 
+    "docType": "BankOperation", 
+    "bankAcount": "1234567890", 
+    "date": "2013-09-28T00:00:00.000Z"
+  }, 
+  {
+    "title": "MOBILE 1234567", 
+    "raw": "PRELEVEMENT MOBILE 1234567", 
+    "amount": -19.99, 
+    "docType": "BankOperation", 
+    "bankAcount": "1234567890", 
+    "date": "2013-10-02T00:00:00.000Z"
+  }, 
+  {
+    "title": "LOGITEL POUR: AGENCE PARIS CHAMPS ELYSEES", 
+    "raw": "VIR EUROPEEN EMIS LOGITEL POUR: AGENCE PARIS CHAMPS ELYSEES", 
+    "amount": -500.0, 
+    "docType": "BankOperation", 
+    "bankAcount": "1234567890", 
+    "date": "2013-10-04T00:00:00.000Z"
+  }, 
+  {
+    "title": "LCL LE CREDIT LYONNAIS", 
+    "raw": "CARTE X1234 RETRAIT DAB 05/10 10H04 LCL LE CREDIT LYONNAIS", 
+    "amount": -40.0, 
+    "docType": "BankOperation", 
+    "bankAcount": "1234567890", 
+    "date": "2013-10-05T00:00:00.000Z"
+  }, 
+  {
+    "title": "INTERMARCHE", 
+    "raw": "CARTE X1234 05/10 INTERMARCHE", 
+    "amount": -30.48, 
+    "docType": "BankOperation", 
+    "bankAcount": "1234567890", 
+    "date": "2013-10-05T00:00:00.000Z"
+  }, 
+  {
+    "title": "SALAIRE", 
+    "raw": "VIR RECU MOTIF\u00a0: SALAIRE", 
+    "amount": 700.0, 
+    "docType": "BankOperation", 
+    "bankAcount": "1234567890", 
+    "date": "2013-10-08T00:00:00.000Z"
+  }, 
+  {
+    "title": "INTERMARCHE", 
+    "raw": "CARTE X1234 11/10 INTERMARCHE", 
+    "amount": -52.04, 
+    "docType": "BankOperation", 
+    "bankAcount": "1234567890", 
+    "date": "2013-10-11T00:00:00.000Z"
+  }, 
+  {
+    "title": "SNCF COMMERCE ELECTRONIQUE", 
+    "raw": "CARTE X1234 15/10 SNCF COMMERCE ELECTRONIQUE", 
+    "amount": -15.0, 
+    "docType": "BankOperation", 
+    "bankAcount": "1234567890", 
+    "date": "2013-10-15T00:00:00.000Z"
+  }, 
+  {
+    "title": "CREDIT DU NORD", 
+    "raw": "CARTE X1234 RETRAIT DAB 15/10 18H03 CREDIT DU NORD", 
+    "amount": -50.0, 
+    "docType": "BankOperation", 
+    "bankAcount": "1234567890", 
+    "date": "2013-10-15T00:00:00.000Z"
+  }, 
+  {
+    "title": "INTERMARCHE", 
+    "raw": "CARTE X1234 16/10 INTERMARCHE", 
+    "amount": -77.48, 
+    "docType": "BankOperation", 
+    "bankAcount": "1234567890", 
+    "date": "2013-10-16T00:00:00.000Z"
+  }, 
+  {
+    "title": "LOGITEL POUR\u00a0: MARTIN", 
+    "raw": "VIR EUROPEEN EMIS LOGITEL POUR: MARTIN", 
+    "amount": 200.0, 
+    "docType": "BankOperation", 
+    "bankAcount": "1234567890", 
+    "date": "2013-10-20T00:00:00.000Z"
+  }, 
+  {
+    "title": "LOGITEL POUR\u00a0: MARTIN", 
+    "raw": "VIR EUROPEEN EMIS LOGITEL POUR: MARTIN", 
+    "amount": -200.0, 
+    "docType": "BankOperation", 
+    "bankAcount": "987654321", 
+    "date": "2013-10-20T00:00:00.000Z"
+  }, 
+  {
+    "title": "INTERMARCHE", 
+    "raw": "CARTE X1234 24/10 INTERMARCHE", 
+    "amount": -40.72, 
+    "docType": "BankOperation", 
+    "bankAcount": "1234567890", 
+    "date": "2013-10-24T00:00:00.000Z"
+  }, 
+  {
+    "title": "CREDIT DU NORD", 
+    "raw": "CARTE X1234 RETRAIT DAB 25/10 10H03 CREDIT DU NORD", 
+    "amount": -40.0, 
+    "docType": "BankOperation", 
+    "bankAcount": "1234567890", 
+    "date": "2013-10-25T00:00:00.000Z"
+  }, 
+  {
+    "title": "INTERMARCHE", 
+    "raw": "CARTE X1234 30/10 INTERMARCHE", 
+    "amount": -91.32, 
+    "docType": "BankOperation", 
+    "bankAcount": "1234567890", 
+    "date": "2013-10-30T00:00:00.000Z"
+  }, 
+  {
+    "docType": "BankAccount", 
+    "initialAmount": 150, 
+    "accountNumber": "1234567890", 
+    "title": "Compte bancaire", 
+    "lastChecked": "2013-11-20T00:00:00.000Z"
+  }, 
+  {
+    "docType": "BankAccount", 
+    "initialAmount": 500, 
+    "accountNumber": "0987654321", 
+    "title": "Livret A", 
+    "lastChecked": "2013-11-20T00:00:00.000Z"
+  }
+]

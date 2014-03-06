@@ -1,0 +1,107 @@
+[
+{   
+    "docType": "BankAccount",
+    "bank": "societegenerale",
+    "accountNumber": "1234567890",
+        "title": "Compte bancaire",
+        "lastChecked": "2013-11-20T00:00:00.000Z",
+        "initialAmount": 150
+},
+{
+    "docType": "BankAccount",
+    "bank": "societegenerale",
+    "accountNumber": "0987654321",
+    "title": "Livret A",
+    "lastChecked": "2013-11-20T00:00:00.000Z",
+    "initialAmount": 500
+},
+{
+    "docType": "BankOperation",
+    "title": "SNCF",
+    "raw": "SNCF Carte X1234",
+    "amount": "-15.00",
+    "date": "2013-11-15T00:00:00.000Z",
+    "bankAccount": "1234567890"
+},
+{
+    "docType": "BankOperation",
+    "title": "LIDL",
+    "raw": "LIDL Carte X1234",
+    "amount": "-5.00",
+    "date": "2013-11-20T00:00:00.000Z",
+    "bankAccount": "1234567890"
+},
+{
+    "docType": "BankOperation",
+    "title": "Salaire",
+    "raw": "Virement Cozycloud",
+    "amount": "700.00",
+    "date": "2013-11-10T00:00:00.000Z",
+    "bankAccount": "1234567890"
+},
+{
+    "docType": "BankOperation",
+    "title": "Salaire",
+    "raw": "Virement Cozycloud",
+    "amount": "700.00",
+    "date": "2013-10-10T00:00:00.000Z",
+    "bankAccount": "1234567890"
+},
+{
+    "docType": "BankOperation",
+    "title": "Loyer",
+    "raw": "Virement agence Paris Champs Elysées",
+    "amount": "-300.00",
+    "date": "2013-11-04T00:00:00.000Z",
+    "bankAccount": "1234567890"
+},
+{
+    "docType": "BankOperation",
+    "title": "Loyer",
+    "raw": "Virement agence Paris Champs Elysées",
+    "amount": "-300.00",
+    "date": "2013-10-04T00:00:00.000Z",
+    "bankAccount": "1234567890"
+},
+{
+    "docType": "BankOperation",
+    "bankAccount": "1234567890",
+    "title": "ARMAND THIERY",
+    "date": "2013-11-09T00:00:00.000Z",
+    "amount": "-179",
+    "raw": "CARTE X1234 09/11 ARMAND THIERY"
+},
+{
+    "docType": "BankOperation",
+    "title": "Intermarché courses",
+    "raw": "Intermarché CARTE X1234",
+    "amount": "-100.00",
+    "date": "2013-11-19T00:00:00.000Z",
+    "bankAccount": "1234567890"
+},
+{
+    "docType": "BankOperation",
+    "bankAccount": "1234567890",
+    "title": "LIDL 0304",
+    "date": "2013-11-19T00:00:00.000Z",
+    "amount": "-11.35",
+    "raw": "CARTE X1234 19/11 LIDL 0304"
+},
+{
+    "docType": "BankOperation",
+    "title": "Pot de vin",
+    "raw": "Pot de vin CARTE LES3Suisses",
+    "amount": "100.00",
+    "date": "2013-11-15T00:00:00.000Z",
+    "bankAccount": "0987654321"
+},
+{
+    "docType": "BankOperation",
+    "title": "Virement interne",
+    "raw": "Virement interne pour le compte 1234567890",
+    "amount": "-200.00",
+    "date": "2013-11-20T00:00:00.000Z",
+    "bankAccount": "0987654321"
+}
+
+]
