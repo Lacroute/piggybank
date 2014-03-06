@@ -1,4 +1,4 @@
-TRIER COMPTE
+﻿TRIER COMPTE
 ============
 
 Dictionnaire dépenses, recettes
@@ -230,5 +230,7 @@ DEFINE NEXT ENVELOPE
 
 	daily_envelope_reference = monthly_envelope / (fin - debut)
 	daily_envelope_real = daily_envelope_reference * (fin - aujourd'hui)
+
+
 
 	
