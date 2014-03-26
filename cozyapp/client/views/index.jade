@@ -1,3 +1,75 @@
-h1 Coucou les internets
-p Token : #{token}
-p Url   : http://#{url}
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		title PiggyBank
+		link(rel='stylesheet', href="http://fonts.googleapis.com/css?family=Open+Sans:400,700")
+		link(rel='stylesheet', href="../css/style-min.css")
+
+	body
+		div#main-content
+
+			div#logo
+				h1
+					img(src="../img/logo_piggybank.png" alt="PiggyBank logo")
+
+			div.pure-hidden-phone
+				div.main-desktop
+					div.pure-g-r.bandeau
+						div.pure-u-1-2
+							div.wrapper-central
+								section.etape
+									header
+										div.wrapper-header
+											h2 étape
+											span.wide 1
+											span.normal /2
+									article
+										p.description Il n'existe pour l'instant qu'une version mobile de l’application que vous pouvez installer immédiatement en cliquant sur le lien si dessous.
+
+						div.pure-u-1-2
+							div.wrapper-central
+								section.etape
+									header
+										div.wrapper-header
+											h2 étape
+											span.wide 2
+											span.normal /2
+									article
+										p.description Puis accéder à cette page via votre navigateur mobile.
+					
+					div.pure-g-r
+						div.pure-u-1-2
+							div.wrapper-central
+								div.main-action
+									a(href="https://itunes.apple.com/fr/app/piggybank-budget/id834995912?mt=8", target="blank") Télécharger l'application <span class="arrow"></span>
+						div.pure-u-1-2
+							div.wrapper-central
+								div.main-action
+									p http://#{url}
+
+			div.pure-hidden-tablet.pure-hidden-desktop
+				div.main-phone
+					div.pure-g-r
+						div.pure-u-1-2
+							div.wrapper-central
+								section.etape
+									header
+										div.wrapper-header
+											h2 étape
+											span.middle 1/2
+									article
+										p.description Vous pouvez installer l'application iPhone si ce n'est déjà fait en cliquant sur le lien si dessous.
+									div.main-action
+										a(href="#") Télécharger l'application <span class="arrow"></span>
+						div.pure-u-1-2
+							div.wrapper-central
+								section.etape
+									header
+										div.wrapper-header
+											h2 étape
+											span.middle 2/2
+									article
+										p.description Cliquez sur le lien ci dessous pour ouvrir l'application.
+									div.main-action
+										a(href="piggykrobe://?token=#{token}") Go !
