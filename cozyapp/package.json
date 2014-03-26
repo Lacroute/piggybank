@@ -4,11 +4,11 @@
   "engines": [
     "node = 0.8.x"
   ],
-  "description": "Desvriptiojn",
+  "description": "Piggy bank vous permet de réaliser vos envies d'achats sans vous mettre en danger financièrement. Grâce au calcul de votre enveloppe journalière, adaptez vos dépenses de manière à concrétiser vos envies les plus folles !",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mycozycloud/cozy-pfm.git"
+    "url": "https://github.com/Lacroute/piggybank.git"
   },
   "main": "server.coffee",
   "dependencies": {
@@ -22,13 +22,10 @@
   "scripts": {
     "start": "coffee server.coffee"
   },
-  "cozy-displayName": "Mes Comptes",
+  "cozy-displayName": "PiggyBank",
   "cozy-permissions": {
     "Bank": {
       "description": "Les banques auxquelles vous pouvez accéder via l'application."
-    },
-    "BankAccess": {
-      "description": "Vos identifiants d'accès à votre banque sont stockés de façon sécurisée."
     },
     "BankAccount": {
       "description": "Vos différents comptes bancaires."
@@ -39,14 +36,8 @@
     "BankAlert": {
       "description": "Une alerte liée à vos comptes bancaires."
     },
-    "send mail to user": {
-      "description": "A votre demande, des rapports journaliers, hebdomadaires ou mensuels peuvent vous être envoyés par email."
-    },
-    "Notification": {
-      "description": "Des notifications sont créées lorsque des alertes sont mises en place dans l'application."
-    },
     "CozyInstance": {
-      "description": "Afin d'afficher le contenu dans votre langue, l'application doit accéder à vos préférences."
+      "description": "Afin de récupérer votre url, l'application doit accéder à vos préférences."
     }
   }
 }
