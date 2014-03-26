@@ -33,9 +33,6 @@
     "BankOperation": {
       "description": "Une opération bancaire."
     },
-    "BankAlert": {
-      "description": "Une alerte liée à vos comptes bancaires."
-    },
     "CozyInstance": {
       "description": "Afin de récupérer votre url, l'application doit accéder à vos préférences."
     }

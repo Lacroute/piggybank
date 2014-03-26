@@ -4,7 +4,7 @@ Le code source de l'application PiggyBank est destiné pour fonctionner dans la 
 
 ## PiggyBank Budget sur iOs
 
-Lien iStore.
+https://itunes.apple.com/fr/app/piggybank-budget/id834995912?mt=8
 
 ## En savoir plus
 
