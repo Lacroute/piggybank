@@ -8,5 +8,5 @@ https://itunes.apple.com/fr/app/piggybank-budget/id834995912?mt=8
 
 ## En savoir plus
 
-Le Projet MesInfos : http://mesinfos.fing.org
-La FING : http://fing.org
+* Le Projet MesInfos : http://mesinfos.fing.org
+* La FING : http://fing.org
