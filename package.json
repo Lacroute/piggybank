@@ -35,6 +35,9 @@
     },
     "CozyInstance": {
       "description": "Afin de récupérer votre url, l'application doit accéder à vos préférences."
+    },
+    "PiggybankConfig": {
+      "description": "Afin de lier votre mobile à votre Cozy, l'application soit stocker des éléments de configuration."
     }
   }
 }
