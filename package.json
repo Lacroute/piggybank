@@ -28,13 +28,16 @@
       "description": "Les banques auxquelles vous pouvez accéder via l'application."
     },
     "BankAccount": {
-      "description": "Vos différents comptes bancaires."
+      "description": "Choisir le compte utilisé dans l'application parmi vos différents comptes bancaires."
     },
     "BankOperation": {
-      "description": "Une opération bancaire."
+      "description": "Lire vos opérations bancaires pour vous les présenter sur votre mobile."
     },
     "CozyInstance": {
-      "description": "Afin de récupérer votre url, l'application doit accéder à vos préférences."
+      "description": "L'application à besoin de l'url de votre espace personnel, et doit donc accéder aux préférences."
+    },
+    "PiggybankConfig": {     
+      "description": "Afin de lier votre mobile à votre Cozy, l'application doit stocker des éléments de configuration."
     }
   }
 }
