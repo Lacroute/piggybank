@@ -21,25 +21,25 @@ module.exports.home = (req, res) ->
 
 module.exports.listAccount = (req, res) ->
 	helper.getToken (err, token) ->
-	if err
-		res.send 200, err
-	else if token isnt req.param('t')
-		res.send 200,
-			'status': 'bad token'
-	else
-		bank_account.all (err, result) ->
-			result = helper.formatAccountData result
-			if err
-				res.send 200, err
-			else if result.length is 0
-				res.send 200,
-				'status': 'empty'
-			else
-				res.send 200, result
+		if err?
+			res.send 200, err
+		else if token isnt req.param('t')
+			res.send 200,
+				'status': 'bad token'
+		else
+			bank_account.all (err, result) ->
+				result = helper.formatAccountData result
+				if err?
+					res.send 200, err
+				else if result.length is 0
+					res.send 200,
+					'status': 'empty'
+				else
+					res.send 200, result
 
 module.exports.listOperation = (req, res) ->
 	helper.getToken (err, token) ->
-		if err
+		if err?
 			res.send 200, err
 		else if token isnt req.param('t')
 			res.send 200,
