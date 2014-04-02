@@ -36,8 +36,8 @@
     "CozyInstance": {
       "description": "L'application à besoin de l'url de votre espace personnel, et doit donc accéder aux préférences."
     },
-    "PiggybankConfig": {     
-      "description": "Afin de lier votre mobile à votre Cozy, l'application doit stocker des éléments de configuration."
+    "PiggybankConfig": {
+      "description": "Afin de lier votre mobile à votre Cozy, l'application soit stocker des éléments de configuration."
     }
   }
 }
