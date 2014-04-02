@@ -6,12 +6,14 @@ helper         = require '../lib/helper'
 
 module.exports.home = (req, res) ->
 	helper.getToken (err, token) ->
-		if err
-			res.send 200, err
+		if err?
+			console.log "get token error", err
+			res.send 500, err
 		else
 			cozy_instance.getInstance (err, instance) ->
-				if err
-					res.send 200, err
+				if err?
+					console.log "get instance error", err
+					res.send 500, err
 				else
 					res.render 'index.jade',
 						token: token
