@@ -24,30 +24,33 @@ class helper
               callback null, @token
 
   formatOperationData: (result) ->
-    formated_result = {}
-    account_array = []
-    formated_result.compteDTOs = account_array
+    formated_result = []
     tmp = {}
+    
     for item in result
       tmp.libelleCourt = item.title
       tmp.libelleOperationMediaMicro1 = item.raw
       tmp.montant = item.amount
       tmp.date = item.date
-      account_array.push tmp
+      formated_result.push tmp
       tmp = {}
 
     return formated_result
 
   formatAccountData: (result) ->
     # alias, id, solde,
-    formated_result = []
+    formated_result = {}
+    account_array = []
     tmp = {}
+
     for item in result
       tmp.id = item.accountNumber
       tmp.alias = item.title
       tmp.solde = item.initialAmount
-      formated_result.push tmp
+      account_array.push tmp
       tmp = {}
+
+    formated_result.compteDTOs = account_array
 
     return formated_result
 
