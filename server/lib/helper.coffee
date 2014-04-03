@@ -36,7 +36,7 @@ class helper
       operation_array.push tmp
       tmp = {}
 
-    formated_result.operationDTOlist = operation_array
+    formated_result.operationDTOList = operation_array
 
     return formated_result
 
