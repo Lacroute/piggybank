@@ -24,7 +24,8 @@ class helper
               callback null, @token
 
   formatOperationData: (result) ->
-    formated_result = []
+    formated_result = {}
+    operation_array = []
     tmp = {}
     
     for item in result
@@ -32,8 +33,10 @@ class helper
       tmp.libelleOperationMediaMicro1 = item.raw
       tmp.montant = item.amount
       tmp.date = item.date
-      formated_result.push tmp
+      operation_array.push tmp
       tmp = {}
+
+    formated_result.operationDTOlist = operation_array
 
     return formated_result
 
