@@ -32,7 +32,7 @@ class helper
       tmp.libelleCourt = item.title
       tmp.libelleOperationMediaMicro1 = item.raw
       tmp.montant = item.amount
-      tmp.date = item.date
+      tmp.date = new Date(item.date).getTime();
       operation_array.push tmp
       tmp = {}
 
